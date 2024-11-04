@@ -1,0 +1,8 @@
+storage:
+  dsn: "cproto://reindexer:6534"
+  name: "testdb"
+cache:
+  live_time: 15
+server:
+  port: ":8080"
+  idle_timeout: 30s

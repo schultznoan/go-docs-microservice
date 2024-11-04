@@ -1,0 +1,16 @@
+version: '3'
+services:
+  reindexer:
+    image: reindexer/reindexer
+    container_name: rx
+    ports:
+      - "6534:6534"
+      - "9088:9088"
+  micro-documents:
+    build: ./
+    command: ./main
+    ports:
+      - "8080:8080"
+    container_name: micro-documents
+    depends_on:
+      - reindexer
